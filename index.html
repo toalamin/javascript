@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS For Beginners</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>JS For Beginners</h1>
+    </header>
+
+    <section class="container">
+      <form id="my-form">
+        <h1>Add User</h1>
+        <div class="msg"></div>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name">
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="text" id="email">
+        </div>
+        <input class="btn" type="submit" value="Submit">
+      </form>
+
+      <ul id="users"></ul>
+
+      <!-- <ul class="items">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+      </ul> -->
+    </section>
+<script>
+	
+	
+const todos = [
+  {
+    id: 1,
+    text:{
+	id: 3,
+    text: 'Meeting with boss',
+    isComplete: true
+	},
+    isComplete: false
+  },
+  {
+    id: 2,
+    text: 'Dinner with wife',
+    isComplete: false
+  },
+  {
+    id: 3,
+    text: 'Meeting with boss',
+    isComplete: true
+  }
+];
+
+
+// Constructor Function
+function Person(firstName, lastName, dob) {
+  // Set object properties
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.dob = new Date(dob); // Set to actual date object using Date constructor
+  // this.getBirthYear = function(){
+  //   return this.dob.getFullYear();
+  // }
+  // this.getFullName = function() {
+  //   return `${this.firstName} ${this.lastName}`
+  // }
+}
+
+// Get Birth Year
+Person.prototype.getBirthYear = function () {
+  return this.dob.getFullYear();
+}
+
+// Get Full Name
+Person.prototype.getFullName = function() {
+  return `${this.firstName} ${this.lastName}`
+}
+
+console.log(Person.prototype.getFullName);
+
+	
+	
+	
+</script>
+
+	
+
+  </body>
+</html>
